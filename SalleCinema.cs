@@ -43,6 +43,12 @@ namespace TPCinema
         {
             get => nbPlaceTarifR; set => nbPlaceTarifR = value;
         }
-         
+        public int nbPlacesDisponible()
+        {
+            int nbPlacesDispo;
+            nbPlacesDispo = nbPlaces - (nbPlaceTarifN + nbPlaceTarifR);
+            return nbPlacesDispo;
+        }
+
     }
 }
