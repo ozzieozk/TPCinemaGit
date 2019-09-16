@@ -77,8 +77,18 @@ namespace TPCinema
         public double chiffreAffaires()
         {
             double chiffre;
-            chiffre = this.NbPlaceTarifR + this.nbPlaceTarifN;
+            chiffre = this.nbPlaceTarifR + this.nbPlaceTarifN;
             return chiffre;
         }
+        public double tauxRemplissage()
+        {
+            double taux;
+            taux = (this.nbPlaceTarifR + this.nbPlaceTarifN) * 100 / this.nbPlaces;
+            return taux;
+        }
+        public string toString()
+        {
+            return ("Film joué" + this.titre + "Nombres de places" + this.nbPlaces + "Prix d'une place" + this.tarifN + "" + this.nbPlaceTarifN + "Nombres de places vendus en tarif normal" + this.NbPlaceTarifR + " places vendues au tarif réduit.");
+        }
     }
 }
