@@ -43,6 +43,6 @@ namespace TPCinema
         {
             get => nbPlaceTarifR; set => nbPlaceTarifR = value;
         }
-        
+         
     }
 }
