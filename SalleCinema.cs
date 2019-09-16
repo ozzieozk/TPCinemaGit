@@ -74,6 +74,11 @@ namespace TPCinema
             this.nbPlaceTarifN = 0;
             this.nbPlaceTarifR = 0;
         }
-
+        public double chiffreAffaires()
+        {
+            double chiffre;
+            chiffre = this.NbPlaceTarifR + this.nbPlaceTarifN;
+            return chiffre;
+        }
     }
 }
