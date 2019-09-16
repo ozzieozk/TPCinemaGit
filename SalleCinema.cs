@@ -49,6 +49,26 @@ namespace TPCinema
             nbPlacesDispo = nbPlaces - (nbPlaceTarifN + nbPlaceTarifR);
             return nbPlacesDispo;
         }
+        public bool vendrePlaces(int nbre, bool tarifReduit)
+        {
+            if (tarifReduit == true)
+            {
+                this.tarifN = tarifN - (80 / 100);
+            }
+            else
+            {
+                this.tarifN = tarifN * 1;
+            }
+            if (nbre>nbPlacesDisponible())
+            {
+                this.nbPlaces = nbPlaces - nbre; 
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
