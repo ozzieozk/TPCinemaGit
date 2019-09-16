@@ -69,6 +69,11 @@ namespace TPCinema
                 return false;
             }
         }
+        public void remiseAZero()        {
+            this.nbPlaces = 0;
+            this.nbPlaceTarifN = 0;
+            this.nbPlaceTarifR = 0;
+        }
 
     }
 }
